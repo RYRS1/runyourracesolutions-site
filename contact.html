@@ -82,46 +82,49 @@ select{appearance:auto}
         <p class="form-subtitle">The more detail you provide, the more accurately we can scope your security requirements.</p>
 
         <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="quote">
-          <p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+  <input type="hidden" name="form-name" value="quote">
+  <p hidden>
+    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+  </p>
 
-          <div class="form-section"><span class="mono">01 / contact</span></div>
-          <div class="formgrid">
-            <input name="name" placeholder="FULL NAME *" autocomplete="name" required>
-            <input name="company" placeholder="COMPANY / ORGANIZATION *" autocomplete="organization" required>
-            <input name="email" type="email" placeholder="EMAIL ADDRESS *" autocomplete="email" required>
-            <input name="phone" type="tel" placeholder="PHONE NUMBER *" autocomplete="tel" required>
-          </div>
+  <div class="form-section"><span>contact</span></div>
+  <div class="formgrid">
+    <input name="name" placeholder="FULL NAME *" autocomplete="name" required>
+    <input name="company" placeholder="ORGANIZATION *" autocomplete="organization" required>
+    <input name="email" type="email" placeholder="EMAIL ADDRESS *" autocomplete="email" required>
+    <input name="phone" type="tel" placeholder="PHONE NUMBER *" autocomplete="tel" required>
+  </div>
 
-          <div class="form-section"><span class="mono">02 / site</span></div>
-          <div class="formgrid">
-            <input name="site_address" placeholder="PROPERTY / SITE ADDRESS">
-            <input name="city" placeholder="CITY">
-            <input name="state" placeholder="STATE" value="TX">
-            <input name="site_size" placeholder="APPROX. SITE SIZE / SQ FT">
-          </div>
+  <div class="form-section"><span>site</span></div>
+  <div class="formgrid">
+    <input name="site_address" placeholder="SITE ADDRESS *" required>
+    <input name="city" placeholder="CITY">
+    <input name="state" placeholder="STATE" value="TX">
+    <input name="site_size" placeholder="APPROX. SITE SIZE / SQ FT">
+  </div>
 
-          <div class="form-section"><span class="mono">03 / security requirement</span></div>
-          <div class="formgrid">
-            <select name="service" required>
-              <option value="">SERVICE OF INTEREST *</option>
-              <option>Mobile Surveillance Trailers</option>
-              <option>Armed Security Guards</option>
-              <option>Unarmed Security Guards</option>
-              <option>Remote Monitoring & Video Verification</option>
-              <option>Security & Privacy Fencing</option>
-              <option>Security Consulting & Assessment</option>
-              <option>Multiple Services / Unsure</option>
-            </select>
-            <select name="start_date">
-              <option value="">DESIRED START DATE</option>
-              <option>Immediately</option>
-              <option>Within 7 days</option>
-              <option>Within 30 days</option>
-              <option>1–3 months</option>
-              <option>Planning / Future</option>
-            </select>
-          </div>
+  <div class="form-section"><span>security requirement</span></div>
+  <div class="formgrid">
+    <select name="service" required>
+      <option value="">SERVICE OF INTEREST</option>
+      <option>Mobile Surveillance Trailers</option>
+      <option>Armed Security Guards</option>
+      <option>Unarmed Security Guards</option>
+      <option>Remote Monitoring & Video Verification</option>
+      <option>Security & Privacy Fencing</option>
+      <option>Security Consulting & Assessment</option>
+      <option>Multiple Services / Unsure</option>
+    </select>
+    <select name="start_date">
+      <option value="">DESIRED START</option>
+      <option>Immediately</option>
+      <option>Within 7 days</option>
+      <option>Within 30 days</option>
+      <option>1–3 months</option>
+      <option>Planning / Future</option>
+    </select>
+  </div>
+</form>
 
           <div class="form-section"><span class="mono">04 / project details</span></div>
           <textarea class="full" name="message" placeholder="TELL US ABOUT THE PROPERTY, SECURITY CONCERN, CURRENT COVERAGE, HOURS NEEDED, OR ANY OTHER DETAILS THAT WILL HELP US UNDERSTAND THE REQUIREMENT." required></textarea>
