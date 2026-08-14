@@ -20,7 +20,7 @@ img{max-width:100%;display:block}
 .green{color:var(--green)}
 header{position:absolute;z-index:20;top:0;left:0;right:0;padding:28px 0}
 .nav{display:flex;align-items:center;justify-content:space-between}
-.logo{width:190px;max-height:48px;object-fit:contain;object-position:left center}
+.logo{width:180px;max-height:230px;object-position:left center}
 .navlinks{display:flex;gap:38px;align-items:center}
 .navlinks a{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:lowercase;color:var(--bone);opacity:.9}
 .navlinks a:hover,.navlinks a.active{color:var(--green)}
