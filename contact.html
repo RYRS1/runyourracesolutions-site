@@ -1,77 +1,39 @@
-<form action="https://formspree.io/f/mdendgpz" method="POST" id="quoteForm">
-
-  <!-- 01 / contact -->
-  <h3>01 / contact</h3>
-  <label>
-    Name *
-    <input type="text" name="name" required>
-  </label>
-
-  <label>
-    Email *
-    <input type="email" name="email" required>
-  </label>
-
-  <label>
-    Phone *
-    <input type="tel" name="phone" required>
-  </label>
-
-  <!-- 02 / site -->
-  <h3>02 / site</h3>
-  <label>
-    Property Address *
-    <input type="text" name="address" required>
-  </label>
-
-  <label>
-    City *
-    <input type="text" name="city" required>
-  </label>
-
-  <label>
-    State *
-    <input type="text" name="state" value="TX" required>
-  </label>
-
-  <!-- 03 / security requirement -->
+<div class="form-section">
   <h3>03 / security requirement</h3>
-  <label>
-    Service of Interest *
-    <select name="service" required>
-      <option value="Mobile Surveillance Trailers">Mobile Surveillance Trailers</option>
-      <option value="Armed Security Guards">Armed Security Guards</option>
-      <option value="Unarmed Security Guards">Unarmed Security Guards</option>
-      <option value="Remote Monitoring & Video Verification">Remote Monitoring & Video Verification</option>
-      <option value="Security & Privacy Fencing">Security & Privacy Fencing</option>
-      <option value="Security Consulting & Assessment">Security Consulting & Assessment</option>
-      <option value="Multiple Services / Unsure">Multiple Services / Unsure</option>
-    </select>
-  </label>
+  <label>Service of Interest *</label>
+  <select name="service" required>
+    <option value="Mobile Surveillance Trailers">Mobile Surveillance Trailers</option>
+    <option value="Armed Security Guards">Armed Security Guards</option>
+    <option value="Unarmed Security Guards">Unarmed Security Guards</option>
+    <option value="Remote Monitoring & Video Verification">Remote Monitoring & Video Verification</option>
+    <option value="Security & Privacy Fencing">Security & Privacy Fencing</option>
+    <option value="Security Consulting & Assessment">Security Consulting & Assessment</option>
+    <option value="Multiple Services / Unsure">Multiple Services / Unsure</option>
+  </select>
 
-  <label>
-    Desired Start *
-    <select name="start" required>
-      <option value="Immediately">Immediately</option>
-      <option value="Within 7 days">Within 7 days</option>
-      <option value="Within 30 days">Within 30 days</option>
-      <option value="1–3 months">1–3 months</option>
-      <option value="Planning / Future">Planning / Future</option>
-    </select>
-  </label>
+  <label>Desired Start *</label>
+  <select name="start" required>
+    <option value="Immediately">Immediately</option>
+    <option value="Within 7 days">Within 7 days</option>
+    <option value="Within 30 days">Within 30 days</option>
+    <option value="1–3 months">1–3 months</option>
+    <option value="Planning / Future">Planning / Future</option>
+  </select>
+</div>
 
-  <!-- 04 / project details -->
+<div class="form-section">
   <h3>04 / project details</h3>
-  <label>
-    Project Details *
-    <textarea name="details" required></textarea>
-  </label>
+  <label>Project Details *</label>
+  <textarea name="details" required></textarea>
+</div>
 
-  <button type="submit">submit request →</button>
+<p class="form-note">* required fields</p>
+<p>By submitting this request, you are asking Run Your Race Solutions to contact you regarding your security needs. No obligation to purchase.</p>
+
+<button type="submit" class="button">submit request →</button>
 </form>
 
-<!-- Success Panel -->
-<div id="successPanel" style="display:none;">
+<div id="successPanel" class="success-panel" style="display:none;">
   <h2>We're on it.</h2>
   <p>Your security request has been received. A Run Your Race Solutions representative will review the information and contact you shortly.</p>
   <a href="index.html">return home →</a>
@@ -84,11 +46,7 @@
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: data
-    });
-
+    const response = await fetch(form.action, { method: 'POST', body: data });
     if (response.ok) {
       form.style.display = 'none';
       successPanel.style.display = 'block';
